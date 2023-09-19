@@ -8660,11 +8660,7 @@
                         "type": "string"
                     },
                     "billingAddress": {
-                        "type": "object",
-                        "schema": {
-                            "$ref": "#/components/schemas/BillingAddress"
-                        },
-                        "description": ""
+                        "$ref": "#/components/schemas/BillingAddress"
                     }
                 },
                 "example": {
