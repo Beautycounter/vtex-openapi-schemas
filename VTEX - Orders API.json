@@ -25,7 +25,9 @@
     "paths": {
         "/api/oms/pvt/orders/{orderId}": {
             "get": {
-                "tags": ["Orders"],
+                "tags": [
+                    "Orders"
+                ],
                 "summary": "Get order",
                 "description": "This endpoint retrieves order details by searching a specific order ID or sequence number.\r\n\r\n> You can only access information from orders created in the last two years, and that same period is valid for customers through [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3GiqhqGJTXsWVuio3Xh). To access order data from previous years, please contact [our Support](https://support.vtex.com/hc/en-us/requests). When granted by our Support, your access to orders placed before the last two years is temporary and will be available for 15 days.\r\n\r\n> The `View order` resource is needed to use this API request. This is included in `OMS - Full access` and `IntegrationProfile - Fulfillment Oms`, among other default roles available in the Admin. Learn more about the [License manager roles and resources](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc).\r\n\r\n> **Onboarding guide** \r\n>\r\n> Check the new [Orders onboarding guide](https://developers.vtex.com/vtex-rest-api/docs/orders-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about Orders and is organized by focusing on the developer's journey.\r\n\r\n## Response body example\r\n\r\n```json\r\n{\r\n    \"orderId\": \"1244730712239-01\",\r\n    \"sequence\": \"502790\",\r\n    \"marketplaceOrderId\": \"\",\r\n    \"marketplaceServicesEndpoint\": null,\r\n    \"sellerOrderId\": \"SLR-1244730712239-01\",\r\n    \"origin\": \"Marketplace\",\r\n    \"affiliateId\": \"\",\r\n    \"salesChannel\": \"1\",\r\n    \"merchantName\": null,\r\n    \"status\": \"payment-approved\",\r\n    \"statusDescription\": \"Pagamento Aprovado\",\r\n    \"value\": 2012,\r\n    \"creationDate\": \"2022-07-06T09:11:51.4597231+00:00\",\r\n    \"lastChange\": \"2022-07-06T09:12:00.2849749+00:00\",\r\n    \"orderGroup\": \"1244730712239\",\r\n    \"totals\": [\r\n        {\r\n            \"id\": \"Items\",\r\n            \"name\": \"Total dos Itens\",\r\n            \"value\": 2265\r\n        },\r\n        {\r\n            \"id\": \"Discounts\",\r\n            \"name\": \"Total dos Descontos\",\r\n            \"value\": -453\r\n        },\r\n        {\r\n            \"id\": \"Shipping\",\r\n            \"name\": \"Total do Frete\",\r\n            \"value\": 200\r\n        },\r\n        {\r\n            \"id\": \"Tax\",\r\n            \"name\": \"Total da Taxa\",\r\n            \"value\": 0\r\n        }\r\n    ],\r\n    \"items\": [\r\n        {\r\n            \"uniqueId\": \"A14AD652AC5D40FBB0137D3ADA3CB800\",\r\n            \"id\": \"12\",\r\n            \"productId\": \"8\",\r\n            \"ean\": null,\r\n            \"lockId\": null,\r\n            \"itemAttachment\": {\r\n                \"content\": {},\r\n                \"name\": null\r\n            },\r\n            \"attachments\": [],\r\n            \"quantity\": 1,\r\n            \"seller\": \"ppxpssp\",\r\n            \"name\": \"Camiseta P Azul\",\r\n            \"refId\": \"COP01_P-A\",\r\n            \"price\": 2265,\r\n            \"listPrice\": 2265,\r\n            \"manualPrice\": null,\r\n            \"priceTags\": [\r\n                {\r\n                    \"name\": \"discount@price-d0231eb3-e9a4-47b2-9c74-bc346df11ce4#e9bb430d-30b3-4461-a86e-f66f35b2915d\",\r\n                    \"value\": -453,\r\n                    \"isPercentual\": false,\r\n                    \"identifier\": \"d0231eb3-e9a4-47b2-9c74-bc346df11ce4\",\r\n                    \"rawValue\": -4.53,\r\n                    \"rate\": null,\r\n                    \"jurisCode\": null,\r\n                    \"jurisType\": null,\r\n                    \"jurisName\": null\r\n                }\r\n            ],\r\n            \"imageUrl\": \"https://ppxps.vteximg.com.br/arquivos/ids/155407-55-55/EE803C74-37A5-4804-B1A6-9F12D22EA505.png?v=637559269453730000\",\r\n            \"detailUrl\": \"/camiseta/p\",\r\n            \"components\": [],\r\n            \"bundleItems\": [],\r\n            \"params\": [],\r\n            \"offerings\": [],\r\n            \"sellerSku\": \"12\",\r\n            \"priceValidUntil\": \"2023-07-06T09:11:04.0000000+00:00\",\r\n            \"commission\": 0,\r\n            \"tax\": 0,\r\n            \"preSaleDate\": null,\r\n            \"additionalInfo\": {\r\n                \"brandName\": \"Marca TOP\",\r\n                \"brandId\": \"2000001\",\r\n                \"categoriesIds\": \"/7/\",\r\n                \"categories\": [\r\n                    {\r\n                        \"id\": 7,\r\n                        \"name\": \"Roupas\"\r\n                    }\r\n                ],\r\n                \"productClusterId\": \"\",\r\n                \"commercialConditionId\": \"1\",\r\n                \"dimension\": {\r\n                    \"cubicweight\": 1.0000,\r\n                    \"height\": 6.0000,\r\n                    \"length\": 10.0000,\r\n                    \"weight\": 4.0000,\r\n                    \"width\": 8.0000\r\n                },\r\n                \"offeringInfo\": null,\r\n                \"offeringType\": null,\r\n                \"offeringTypeId\": null\r\n            },\r\n            \"measurementUnit\": \"un\",\r\n            \"unitMultiplier\": 1.0000,\r\n            \"sellingPrice\": 1812,\r\n            \"isGift\": false,\r\n            \"shippingPrice\": null,\r\n            \"rewardValue\": 0,\r\n            \"freightCommission\": 0,\r\n            \"priceDefinition\": {\r\n                \"sellingPrices\": [\r\n                    {\r\n                        \"value\": 1812,\r\n                        \"quantity\": 1\r\n                    }\r\n                ],\r\n                \"calculatedSellingPrice\": 1812,\r\n                \"total\": 1812\r\n            },\r\n            \"taxCode\": \"1122\",\r\n            \"parentItemIndex\": null,\r\n            \"parentAssemblyBinding\": null,\r\n            \"callCenterOperator\": null,\r\n            \"serialNumbers\": null,\r\n            \"assemblies\": [],\r\n            \"costPrice\": null\r\n        }\r\n    ],\r\n    \"marketplaceItems\": [],\r\n    \"clientProfileData\": {\r\n        \"id\": \"clientProfileData\",\r\n        \"email\": \"0bf94cbf23ff410aaaf7c707dd8a808c@ct.vtex.com.br\",\r\n        \"firstName\": \"Paulo\",\r\n        \"lastName\": \"Filho\",\r\n        \"documentType\": \"cpf\",\r\n        \"document\": \"11156703794\",\r\n        \"phone\": \"+5521971126360\",\r\n        \"corporateName\": null,\r\n        \"tradeName\": null,\r\n        \"corporateDocument\": null,\r\n        \"stateInscription\": null,\r\n        \"corporatePhone\": null,\r\n        \"isCorporate\": false,\r\n        \"userProfileId\": \"ca0695a8-df34-4076-8663-725041930c75\",\r\n        \"customerClass\": null\r\n    },\r\n    \"giftRegistryData\": null,\r\n    \"marketingData\": {\r\n        \"id\": \"marketingData\",\r\n        \"utmSource\": null,\r\n        \"utmPartner\": null,\r\n        \"utmMedium\": null,\r\n        \"utmCampaign\": null,\r\n        \"coupon\": null,\r\n        \"utmiCampaign\": null,\r\n        \"utmipage\": null,\r\n        \"utmiPart\": null,\r\n        \"marketingTags\": [\r\n            \"vtex-subscription\"\r\n        ]\r\n    },\r\n    \"ratesAndBenefitsData\": {\r\n        \"id\": \"ratesAndBenefitsData\",\r\n        \"rateAndBenefitsIdentifiers\": [\r\n            {\r\n                \"description\": \"Desconto de 20% no pedido para assinatura\",\r\n                \"featured\": true,\r\n                \"id\": \"d0231eb3-e9a4-47b2-9c74-bc346df11ce4\",\r\n                \"name\": \"Desconto 20% assinante\",\r\n                \"matchedParameters\": {},\r\n                \"additionalInfo\": null\r\n            }\r\n        ]\r\n    },\r\n    \"shippingData\": {\r\n        \"id\": \"shippingData\",\r\n        \"address\": {\r\n            \"addressType\": \"residential\",\r\n            \"receiverName\": \"Paulo Filho\",\r\n            \"addressId\": \"1651158093975\",\r\n            \"postalCode\": \"21341-270\",\r\n            \"city\": \"Rio de Janeiro\",\r\n            \"state\": \"RJ\",\r\n            \"country\": \"BRA\",\r\n            \"street\": \"Rua Pinto Teles\",\r\n            \"number\": \"1\",\r\n            \"neighborhood\": \"Praça Seca\",\r\n            \"complement\": null,\r\n            \"reference\": null,\r\n            \"geoCoordinates\": [\r\n                -43.350608825683594,\r\n                -22.886520385742188\r\n            ]\r\n        },\r\n        \"logisticsInfo\": [\r\n            {\r\n                \"itemIndex\": 0,\r\n                \"selectedSla\": \"Normal\",\r\n                \"lockTTL\": \"12d\",\r\n                \"price\": 200,\r\n                \"listPrice\": 200,\r\n                \"sellingPrice\": 200,\r\n                \"deliveryWindow\": null,\r\n                \"deliveryCompany\": \"Transportadora\",\r\n                \"shippingEstimate\": \"2bd\",\r\n                \"shippingEstimateDate\": \"2022-07-08T09:11:57.8421126+00:00\",\r\n                \"slas\": [\r\n                    {\r\n                        \"id\": \"Normal\",\r\n                        \"name\": \"Normal\",\r\n                        \"shippingEstimate\": \"2bd\",\r\n                        \"deliveryWindow\": null,\r\n                        \"price\": 200,\r\n                        \"deliveryChannel\": \"delivery\",\r\n                        \"pickupStoreInfo\": {\r\n                            \"additionalInfo\": null,\r\n                            \"address\": null,\r\n                            \"dockId\": null,\r\n                            \"friendlyName\": null,\r\n                            \"isPickupStore\": false\r\n                        },\r\n                        \"polygonName\": \"\",\r\n                        \"lockTTL\": \"12d\",\r\n                        \"pickupPointId\": null,\r\n                        \"transitTime\": \"2bd\"\r\n                    }\r\n                ],\r\n                \"shipsTo\": [\r\n                    \"BRA\"\r\n                ],\r\n                \"deliveryIds\": [\r\n                    {\r\n                        \"courierId\": \"1\",\r\n                        \"courierName\": \"Transportadora\",\r\n                        \"dockId\": \"169fe66\",\r\n                        \"quantity\": 1,\r\n                        \"warehouseId\": \"166cb0c\",\r\n                        \"accountCarrierName\": null\r\n                    }\r\n                ],\r\n                \"deliveryChannel\": \"delivery\",\r\n                \"pickupStoreInfo\": {\r\n                    \"additionalInfo\": null,\r\n                    \"address\": null,\r\n                    \"dockId\": null,\r\n                    \"friendlyName\": null,\r\n                    \"isPickupStore\": false\r\n                },\r\n                \"addressId\": \"1651158093975\",\r\n                \"polygonName\": \"\",\r\n                \"pickupPointId\": null,\r\n                \"transitTime\": \"2bd\"\r\n            }\r\n        ],\r\n        \"trackingHints\": null,\r\n        \"selectedAddresses\": [\r\n            {\r\n                \"addressId\": \"1651158093975\",\r\n                \"addressType\": \"residential\",\r\n                \"receiverName\": \"Paulo Filho\",\r\n                \"street\": \"Rua Pinto Teles\",\r\n                \"number\": \"1\",\r\n                \"complement\": null,\r\n                \"neighborhood\": \"Praça Seca\",\r\n                \"postalCode\": \"21341-270\",\r\n                \"city\": \"Rio de Janeiro\",\r\n                \"state\": \"RJ\",\r\n                \"country\": \"BRA\",\r\n                \"reference\": null,\r\n                \"geoCoordinates\": [\r\n                    -43.350608825683594,\r\n                    -22.886520385742188\r\n                ]\r\n            }\r\n        ]\r\n    },\r\n    \"paymentData\": {\r\n        \"giftCards\": [],\r\n        \"transactions\": [\r\n            {\r\n                \"isActive\": true,\r\n                \"transactionId\": \"A5BF0F884F314F788F4778B464EE1648\",\r\n                \"merchantName\": \"PPXPS\",\r\n                \"payments\": [\r\n                    {\r\n                        \"id\": \"06D8D76D4BD549EF9CC209D969ACBA84\",\r\n                        \"paymentSystem\": \"47\",\r\n                        \"paymentSystemName\": \"Cash\",\r\n                        \"value\": 2012,\r\n                        \"installments\": 1,\r\n                        \"referenceValue\": 2012,\r\n                        \"cardHolder\": null,\r\n                        \"cardNumber\": null,\r\n                        \"firstDigits\": null,\r\n                        \"lastDigits\": null,\r\n                        \"cvv2\": null,\r\n                        \"expireMonth\": null,\r\n                        \"expireYear\": null,\r\n                        \"url\": null,\r\n                        \"giftCardId\": null,\r\n                        \"giftCardName\": null,\r\n                        \"giftCardCaption\": null,\r\n                        \"redemptionCode\": null,\r\n                        \"group\": \"cash\",\r\n                        \"tid\": null,\r\n                        \"dueDate\": null,\r\n                        \"connectorResponses\": {},\r\n                        \"giftCardProvider\": null,\r\n                        \"giftCardAsDiscount\": null,\r\n                        \"koinUrl\": null,\r\n                        \"accountId\": null,\r\n                        \"parentAccountId\": null,\r\n                        \"bankIssuedInvoiceIdentificationNumber\": null,\r\n                        \"bankIssuedInvoiceIdentificationNumberFormatted\": null,\r\n                        \"bankIssuedInvoiceBarCodeNumber\": null,\r\n                        \"bankIssuedInvoiceBarCodeType\": null,\r\n                        \"billingAddress\": null\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    },\r\n    \"packageAttachment\": {\r\n        \"packages\": []\r\n    },\r\n    \"sellers\": [\r\n        {\r\n            \"id\": \"ppxpssp\",\r\n            \"name\": \"ppxpssp\",\r\n            \"logo\": \"\",\r\n            \"fulfillmentEndpoint\": \"http://fulfillment.vtexcommerce.com.br/api/fulfillment?an=ppxpssp&affiliateId=SLR&sc=1\"\r\n        }\r\n    ],\r\n    \"callCenterOperatorData\": null,\r\n    \"followUpEmail\": \"0a902f64ba1443c3b26ab5cb0b2aad9e@ct.vtex.com.br\",\r\n    \"lastMessage\": null,\r\n    \"hostname\": \"ppxps\",\r\n    \"invoiceData\": null,\r\n    \"changesAttachment\": null,\r\n    \"openTextField\": {\r\n        \"value\": \"Order Created By VTEX Subscription System\"\r\n    },\r\n    \"roundingError\": 0,\r\n    \"orderFormId\": \"3d59650b4e9a447d80ecfac4830926d9\",\r\n    \"commercialConditionData\": null,\r\n    \"isCompleted\": true,\r\n    \"customData\": null,\r\n    \"storePreferencesData\": {\r\n        \"countryCode\": \"BRA\",\r\n        \"currencyCode\": \"BRL\",\r\n        \"currencyFormatInfo\": {\r\n            \"CurrencyDecimalDigits\": 2,\r\n            \"CurrencyDecimalSeparator\": \",\",\r\n            \"CurrencyGroupSeparator\": \".\",\r\n            \"CurrencyGroupSize\": 3,\r\n            \"StartsWithCurrencySymbol\": true\r\n        },\r\n        \"currencyLocale\": 1046,\r\n        \"currencySymbol\": \"R$\",\r\n        \"timeZone\": \"E. South America Standard Time\"\r\n    },\r\n    \"allowCancellation\": true,\r\n    \"allowEdition\": false,\r\n    \"isCheckedIn\": false,\r\n    \"marketplace\": null,\r\n    \"authorizedDate\": \"2022-07-06T09:11:56.0006230+00:00\",\r\n    \"invoicedDate\": null,\r\n    \"cancelReason\": null,\r\n    \"itemMetadata\": {\r\n        \"Items\": [\r\n            {\r\n                \"Id\": \"12\",\r\n                \"Seller\": \"1\",\r\n                \"Name\": \"Camiseta P Azul\",\r\n                \"SkuName\": \"P Azul\",\r\n                \"ProductId\": \"8\",\r\n                \"RefId\": \"COP01_P-A\",\r\n                \"Ean\": null,\r\n                \"ImageUrl\": \"http://ppxps.vteximg.com.br/arquivos/ids/155407-55-55/EE803C74-37A5-4804-B1A6-9F12D22EA505.png?v=637559269453730000\",\r\n                \"DetailUrl\": \"/camiseta/p\",\r\n                \"AssemblyOptions\": []\r\n            }\r\n        ]\r\n    },\r\n    \"subscriptionData\": {\r\n        \"SubscriptionGroupId\": \"C191822AF072C7508F9BBBC655FE8E60\",\r\n        \"Subscriptions\": [\r\n            {\r\n                \"ExecutionCount\": 274,\r\n                \"PriceAtSubscriptionDate\": 2265.0,\r\n                \"ItemIndex\": 0,\r\n                \"Plan\": {\r\n                    \"type\": \"RECURRING_PAYMENT\",\r\n                    \"frequency\": {\r\n                        \"periodicity\": \"DAILY\",\r\n                        \"interval\": 1\r\n                    },\r\n                    \"validity\": {\r\n                        \"begin\": \"2021-10-05T00:00:00.0000000+00:00\",\r\n                        \"end\": null\r\n                    }\r\n                }\r\n            }\r\n        ]\r\n    },\r\n    \"taxData\": null,\r\n    \"checkedInPickupPointId\": null,\r\n    \"cancellationData\": null\r\n}\r\n```",
                 "operationId": "GetOrder",
@@ -74,6 +76,77 @@
                                     "title": "",
                                     "type": "object",
                                     "properties": {
+                                        "subscriptionData": {
+                                            "type": "object",
+                                            "properties": {
+                                                "SubscriptionGroupId": {
+                                                    "type": "string",
+                                                    "nullable": true
+                                                },
+                                                "Subscriptions": {
+                                                    "type": "array",
+                                                    "nullable": true,
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "ExecutionCount": {
+                                                                "type": "integer",
+                                                                "format": "int32",
+                                                                "nullable": true
+                                                            },
+                                                            "PriceAtSubscriptionDate": {
+                                                                "type": "string",
+                                                                "nullable": true
+                                                            },
+                                                            "ItemIndex": {
+                                                                "type": "integer",
+                                                                "format": "int32",
+                                                                "nullable": true
+                                                            },
+                                                            "Plan": {
+                                                                "type": "object",
+                                                                "nullable": true,
+                                                                "properties": {
+                                                                    "type": {
+                                                                        "type": "string",
+                                                                        "nullable": true
+                                                                    },
+                                                                    "frequency": {
+                                                                        "type": "object",
+                                                                        "nullable": true,
+                                                                        "properties": {
+                                                                            "periodicity": {
+                                                                                "type": "string",
+                                                                                "nullable": true
+                                                                            },
+                                                                            "interval": {
+                                                                                "type": "integer",
+                                                                                "format": "int32",
+                                                                                "nullable": true
+                                                                            }
+                                                                        }
+                                                                    },
+                                                                    "validity": {
+                                                                        "type": "object",
+                                                                        "nullable": true,
+                                                                        "properties": {
+                                                                            "begin": {
+                                                                                "type": "string",
+                                                                                "nullable": true
+                                                                            },
+                                                                            "end": {
+                                                                                "type": "string",
+                                                                                "nullable": true
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
                                         "emailTracked": {
                                             "type": "string",
                                             "description": "Email tracked."
@@ -193,6 +266,355 @@
                                             "items": {
                                                 "type": "object",
                                                 "properties": {
+                                                    "components": {
+                                                        "type": "array",
+                                                        "description": "Information on each bundle item in the order.",
+                                                        "items": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "uniqueId": {
+                                                                    "type": "string",
+                                                                    "description": "Order's item unique ID."
+                                                                },
+                                                                "id": {
+                                                                    "type": "string",
+                                                                    "description": "ID."
+                                                                },
+                                                                "productId": {
+                                                                    "type": "string",
+                                                                    "description": "Product ID."
+                                                                },
+                                                                "productRefId": {
+                                                                    "type": "string",
+                                                                    "description": "Product Ref ID."
+                                                                },
+                                                                "refId": {
+                                                                    "type": "string",
+                                                                    "description": "Ref ID."
+                                                                },
+                                                                "ean": {
+                                                                    "type": "string",
+                                                                    "description": "European Article Number.",
+                                                                    "nullable": true
+                                                                },
+                                                                "name": {
+                                                                    "type": "string",
+                                                                    "description": "Name."
+                                                                },
+                                                                "skuName": {
+                                                                    "type": "string",
+                                                                    "description": "SKU name."
+                                                                },
+                                                                "modalType": {
+                                                                    "type": "string",
+                                                                    "description": "Modal type."
+                                                                },
+                                                                "parentItemIndex": {
+                                                                    "type": "integer",
+                                                                    "description": "Parent item index.",
+                                                                    "nullable": true
+                                                                },
+                                                                "parentAssemblyBinding": {
+                                                                    "type": "string",
+                                                                    "description": "Parent assembly binding.",
+                                                                    "nullable": true
+                                                                },
+                                                                "priceValidUntil": {
+                                                                    "type": "string",
+                                                                    "description": "Price expiration date and time.",
+                                                                    "nullable": true
+                                                                },
+                                                                "sellerSku": {
+                                                                    "type": "string",
+                                                                    "description": "Seller sku."
+                                                                },
+                                                                "tax": {
+                                                                    "type": "integer",
+                                                                    "description": "Tax value in cents.",
+                                                                    "nullable": true
+                                                                },
+                                                                "price": {
+                                                                    "type": "integer",
+                                                                    "description": "Price in cents.",
+                                                                    "nullable": true
+                                                                },
+                                                                "listPrice": {
+                                                                    "type": "integer",
+                                                                    "description": "List price in cents.",
+                                                                    "nullable": true
+                                                                },
+                                                                "manualPrice": {
+                                                                    "type": "integer",
+                                                                    "description": "Manual price in cents.",
+                                                                    "nullable": true
+                                                                },
+                                                                "manualPriceAppliedBy": {
+                                                                    "type": "string",
+                                                                    "description": "User that applied the manual price, if that is the case."
+                                                                },
+                                                                "sellingPrice": {
+                                                                    "type": "integer",
+                                                                    "description": "Selling price in cents. Note that this field may be subject to rounding discrepancies. We recommend retrieving data from the `priceDefinition` data structure instead.",
+                                                                    "nullable": true
+                                                                },
+                                                                "rewardValue": {
+                                                                    "type": "integer",
+                                                                    "description": "Reward value in cents.",
+                                                                    "nullable": true
+                                                                },
+                                                                "isGift": {
+                                                                    "type": "boolean",
+                                                                    "description": "Indicates whether item is a gift.",
+                                                                    "nullable": true
+                                                                },
+                                                                "additionalInfo": {
+                                                                    "type": "object",
+                                                                    "description": "Additional information.",
+                                                                    "properties": {
+                                                                        "dimension": {
+                                                                            "type": "object",
+                                                                            "description": "Dimension of the item.",
+                                                                            "properties": {
+                                                                                "cubicweight": {
+                                                                                    "type": "number",
+                                                                                    "description": "The item's cubic weight."
+                                                                                },
+                                                                                "height": {
+                                                                                    "type": "number",
+                                                                                    "description": "The item's height."
+                                                                                },
+                                                                                "length": {
+                                                                                    "type": "number",
+                                                                                    "description": "The item's length."
+                                                                                },
+                                                                                "weight": {
+                                                                                    "type": "number",
+                                                                                    "description": "The item's weight."
+                                                                                },
+                                                                                "width": {
+                                                                                    "type": "number",
+                                                                                    "description": "The item's width."
+                                                                                }
+                                                                            }
+                                                                        },
+                                                                        "brandName": {
+                                                                            "type": "string",
+                                                                            "description": "Brand name."
+                                                                        },
+                                                                        "brandId": {
+                                                                            "type": "string",
+                                                                            "description": "Brand ID."
+                                                                        },
+                                                                        "categoriesIds": {
+                                                                            "type": "string",
+                                                                            "description": "Categories ID."
+                                                                        },
+                                                                        "categories": {
+                                                                            "type": "array",
+                                                                            "description": "Categories",
+                                                                            "items": {
+                                                                                "type": "object",
+                                                                                "description": "Categories items",
+                                                                                "properties": {
+                                                                                    "id": {
+                                                                                        "type": "string",
+                                                                                        "description": "Category ID."
+                                                                                    },
+                                                                                    "name": {
+                                                                                        "type": "string",
+                                                                                        "description": "Category Name."
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        },
+                                                                        "productClusterId": {
+                                                                            "type": "string",
+                                                                            "description": "Brand ID."
+                                                                        },
+                                                                        "commercialConditionId": {
+                                                                            "type": "string",
+                                                                            "description": "Categories ID."
+                                                                        },
+                                                                        "offeringInfo": {
+                                                                            "type": "string",
+                                                                            "description": "Offering information.",
+                                                                            "nullable": true
+                                                                        },
+                                                                        "offeringType": {
+                                                                            "type": "string",
+                                                                            "description": "Offering type.",
+                                                                            "nullable": true
+                                                                        },
+                                                                        "offeringTypeId": {
+                                                                            "type": "string",
+                                                                            "description": "Offering type ID.",
+                                                                            "nullable": true
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "preSaleDate": {
+                                                                    "type": "string",
+                                                                    "description": "Presale date.",
+                                                                    "nullable": true
+                                                                },
+                                                                "productCategoryIds": {
+                                                                    "type": "string",
+                                                                    "description": "Product category IDs."
+                                                                },
+                                                                "productCategories": {
+                                                                    "type": "object",
+                                                                    "description": "Object, where each field is an ID from `productCategoryIds.",
+                                                                    "properties": {
+                                                                        "{ID}": {
+                                                                            "type": "string",
+                                                                            "description": "Product category corresponding to the ID in the field key."
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "quantity": {
+                                                                    "type": "integer",
+                                                                    "description": "Quantity."
+                                                                },
+                                                                "seller": {
+                                                                    "type": "string",
+                                                                    "description": "Seller."
+                                                                },
+                                                                "sellerChain": {
+                                                                    "type": "array",
+                                                                    "description": "Sellers involved in the chain. The list should contain only one seller, unless it is a [Multilevel Omnichannel Inventory](https://help.vtex.com/pt/tutorial/multilevel-omnichannel-inventory--7M1xyCZWUyCB7PcjNtOyw4) order.",
+                                                                    "items": {
+                                                                        "type": "string",
+                                                                        "description": "Seller."
+                                                                    }
+                                                                },
+                                                                "imageUrl": {
+                                                                    "type": "string",
+                                                                    "description": "Image URL."
+                                                                },
+                                                                "detailUrl": {
+                                                                    "type": "string",
+                                                                    "description": "Detail URL."
+                                                                },
+                                                                "bundleItems": {
+                                                                    "type": "array",
+                                                                    "description": "Information on services sold along with the SKU. Example: a gift package.",
+                                                                    "items": {
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                            "type": {
+                                                                                "type": "string",
+                                                                                "description": "Type"
+                                                                            },
+                                                                            "id": {
+                                                                                "type": "integer",
+                                                                                "description": "Service identifier."
+                                                                            },
+                                                                            "name": {
+                                                                                "type": "string",
+                                                                                "description": "Name."
+                                                                            },
+                                                                            "price": {
+                                                                                "type": "integer",
+                                                                                "description": "Price in cents."
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "attachments": {
+                                                                    "type": "array",
+                                                                    "description": "Array containing information on attachments.",
+                                                                    "items": {
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                            "name": {
+                                                                                "type": "string"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "priceTags": {
+                                                                    "type": "array",
+                                                                    "description": "Array of price tags, each of which, modifies the price in some way, like discounts or rates that apply to the item in the context of the order.",
+                                                                    "items": {
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                            "identifier": {
+                                                                                "type": "string",
+                                                                                "description": "Price tag identifier."
+                                                                            },
+                                                                            "isPercentual": {
+                                                                                "type": "boolean",
+                                                                                "description": "Indicates whether price tag value is applied through a percentage."
+                                                                            },
+                                                                            "name": {
+                                                                                "type": "string",
+                                                                                "description": "Name."
+                                                                            },
+                                                                            "rawValue": {
+                                                                                "type": "integer",
+                                                                                "description": "Raw value."
+                                                                            },
+                                                                            "value": {
+                                                                                "type": "integer",
+                                                                                "description": "Value."
+                                                                            },
+                                                                            "rate": {
+                                                                                "type": "string",
+                                                                                "description": "Rate."
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "availability": {
+                                                                    "type": "string",
+                                                                    "description": "Availability"
+                                                                },
+                                                                "measurementUnit": {
+                                                                    "type": "string",
+                                                                    "description": "Measurement unit"
+                                                                },
+                                                                "unitMultiplier": {
+                                                                    "type": "integer",
+                                                                    "description": "Unit multiplier"
+                                                                },
+                                                                "manufacturerCode": {
+                                                                    "type": "string",
+                                                                    "description": "Manufacturer code."
+                                                                },
+                                                                "priceDefinition": {
+                                                                    "type": "object",
+                                                                    "description": "Price information.",
+                                                                    "properties": {
+                                                                        "calculatedSellingPrice": {
+                                                                            "type": "integer",
+                                                                            "description": "Calculated selling price in cents."
+                                                                        },
+                                                                        "total": {
+                                                                            "type": "integer",
+                                                                            "description": "Total in cents."
+                                                                        },
+                                                                        "sellingPrices": {
+                                                                            "type": "array",
+                                                                            "description": "Selling prices.",
+                                                                            "items": {
+                                                                                "type": "object",
+                                                                                "properties": {
+                                                                                    "value": {
+                                                                                        "type": "integer",
+                                                                                        "description": "Value in cents."
+                                                                                    },
+                                                                                    "quantity": {
+                                                                                        "type": "integer",
+                                                                                        "description": "Quantity."
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    },
                                                     "uniqueId": {
                                                         "type": "string",
                                                         "description": "Order's item unique ID."
@@ -244,6 +666,10 @@
                                                         "type": "string",
                                                         "description": "Price expiration date and time.",
                                                         "nullable": true
+                                                    },
+                                                    "sellerSku": {
+                                                        "type": "string",
+                                                        "description": "Seller sku."
                                                     },
                                                     "tax": {
                                                         "type": "integer",
@@ -321,6 +747,36 @@
                                                             "brandId": {
                                                                 "type": "string",
                                                                 "description": "Brand ID."
+                                                            },
+                                                            "categoriesIds": {
+                                                                "type": "string",
+                                                                "description": "Categories ID."
+                                                            },
+                                                            "categories": {
+                                                                "type": "array",
+                                                                "description": "Categories",
+                                                                "items": {
+                                                                    "type": "object",
+                                                                    "description": "Categories items",
+                                                                    "properties": {
+                                                                        "id": {
+                                                                            "type": "string",
+                                                                            "description": "Category ID."
+                                                                        },
+                                                                        "name": {
+                                                                            "type": "string",
+                                                                            "description": "Category Name."
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            "productClusterId": {
+                                                                "type": "string",
+                                                                "description": "Brand ID."
+                                                            },
+                                                            "commercialConditionId": {
+                                                                "type": "string",
+                                                                "description": "Categories ID."
                                                             },
                                                             "offeringInfo": {
                                                                 "type": "string",
@@ -411,7 +867,12 @@
                                                         "type": "array",
                                                         "description": "Array containing information on attachments.",
                                                         "items": {
-                                                            "type": "string"
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "name": {
+                                                                    "type": "string"
+                                                                }
+                                                            }
                                                         }
                                                     },
                                                     "priceTags": {
@@ -439,6 +900,10 @@
                                                                 "value": {
                                                                     "type": "integer",
                                                                     "description": "Value."
+                                                                },
+                                                                "rate": {
+                                                                    "type": "string",
+                                                                    "description": "Rate"
                                                                 }
                                                             }
                                                         }
@@ -508,8 +973,52 @@
                                             "nullable": true
                                         },
                                         "marketingData": {
-                                            "type": "string",
-                                            "nullable": true
+                                            "type": "object",
+                                            "nullable": true,
+                                            "properties": {
+                                                "id": {
+                                                    "type": "string",
+                                                    "nullable": true
+                                                },
+                                                "utmSource": {
+                                                    "type": "string",
+                                                    "nullable": true
+                                                },
+                                                "utmPartner": {
+                                                    "type": "string",
+                                                    "nullable": true
+                                                },
+                                                "utmMedium": {
+                                                    "type": "string",
+                                                    "nullable": true
+                                                },
+                                                "utmCampaign": {
+                                                    "type": "string",
+                                                    "nullable": true
+                                                },
+                                                "coupon": {
+                                                    "type": "string",
+                                                    "nullable": true
+                                                },
+                                                "utmiCampaign": {
+                                                    "type": "string",
+                                                    "nullable": true
+                                                },
+                                                "utmipage": {
+                                                    "type": "string",
+                                                    "nullable": true
+                                                },
+                                                "utmiPart": {
+                                                    "type": "string",
+                                                    "nullable": true
+                                                },
+                                                "marketingTags": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
                                         },
                                         "ratesAndBenefitsData": {
                                             "$ref": "#/components/schemas/RatesAndBenefitsData"
@@ -657,8 +1166,18 @@
                                             "description": ""
                                         },
                                         "callCenterOperatorData": {
-                                            "type": "string",
-                                            "nullable": true
+                                            "type": "object",
+                                            "properties": {
+                                                "id": {
+                                                    "type": "string"
+                                                },
+                                                "email": {
+                                                    "type": "string"
+                                                },
+                                                "userName": {
+                                                    "type": "string"
+                                                }
+                                            }
                                         },
                                         "followUpEmail": {
                                             "type": "string"
@@ -679,8 +1198,12 @@
                                             "$ref": "#/components/schemas/ChangesAttachment"
                                         },
                                         "openTextField": {
-                                            "type": "string",
-                                            "nullable": true
+                                            "type": "object",
+                                            "properties": {
+                                                "value": {
+                                                    "type": "string"
+                                                }
+                                            }
                                         },
                                         "roundingError": {
                                             "type": "integer",
@@ -697,8 +1220,32 @@
                                             "type": "boolean"
                                         },
                                         "customData": {
-                                            "type": "string",
-                                            "nullable": true
+                                            "type": "object",
+                                            "properties": {
+                                                "customApps": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "fields": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                    "popupId": {
+                                                                        "type": "string"
+                                                                    }
+                                                                }
+                                                            },
+                                                            "id": {
+                                                                "type": "string"
+                                                            },
+                                                            "major": {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
                                         },
                                         "storePreferencesData": {
                                             "$ref": "#/components/schemas/StorePreferencesData"
@@ -1003,7 +1550,9 @@
                                                             "pickupDistance": 0.0
                                                         }
                                                     ],
-                                                    "shipsTo": ["BRA"],
+                                                    "shipsTo": [
+                                                        "BRA"
+                                                    ],
                                                     "deliveryIds": [
                                                         {
                                                             "courierId": "197a56f",
@@ -1456,7 +2005,9 @@
                                                         "pickupDistance": 0.0
                                                     }
                                                 ],
-                                                "shipsTo": ["BRA"],
+                                                "shipsTo": [
+                                                    "BRA"
+                                                ],
                                                 "deliveryIds": [
                                                     {
                                                         "courierId": "197a56f",
@@ -1642,7 +2193,9 @@
         },
         "/api/oms/pvt/orders": {
             "get": {
-                "tags": ["Orders"],
+                "tags": [
+                    "Orders"
+                ],
                 "summary": "List orders",
                 "description": "Retrieves a list of orders according to the filters described below. \r\n\r\nThe limit of information retrieval is 30 pages, the default number of orders per page is 15 and it is possible to configure it up to 100 using the `per_page` parameter. \r\n\r\nBe aware that since October 3rd, 2018, this endpoint does not return the `items` property. \r\n\r\n> You can only access information from orders created in the last two years, and that same period is valid for customers through [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3GiqhqGJTXsWVuio3Xh). To access order data from previous years, please contact [our Support](https://support.vtex.com/hc/en-us/requests). When granted by our Support, your access to orders placed before the last two years is temporary and will be available for 15 days. \r\n\r\n> This endpoint should **not** be used for integrations. Use the [orders Feed or hook](https://developers.vtex.com/docs/guides/orders-feed) for this purpose. \r\n\r\nThis endpoint returns only orders that already have been indexed, which takes approximately four minutes. Because of this, the data retrieved may present inconsistencies. To get live up-to-date information and [build order integrations](https://developers.vtex.com/vtex-rest-api/docs/erp-integration-set-up-order-integration) use the [orders Feed or hook](https://developers.vtex.com/docs/guides/orders-feed).\r\n\r\n> **Onboarding guide** \r\n>\r\n> Check the new [Orders onboarding guide](https://developers.vtex.com/vtex-rest-api/docs/orders-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about Orders and is organized by focusing on the developer's journey.",
                 "operationId": "ListOrders",
@@ -2633,7 +3186,9 @@
         },
         "/api/oms/pvt/orders/{orderId}/start-handling": {
             "post": {
-                "tags": ["Orders"],
+                "tags": [
+                    "Orders"
+                ],
                 "summary": "Start handling order",
                 "description": "Changes the status of an order to indicate that it is in `handling`.\n\r\n\r> Expect a `status 204` response with no content in case of a successful request. The store must validate this response to retry the call if the response differs from the `204` code, making this flow the store's responsibility. This endpoint can also respond with `status 500`. \n\r\n\r> The `Change order workflow status` resource is needed to use this API request. This is included in `OMS - Full access` and `IntegrationProfile - Fulfillment Oms`, among other default roles available in the Admin. Learn more about the [License manager roles and resources](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#).",
                 "operationId": "StartHandling",
@@ -2784,7 +3339,9 @@
         },
         "/api/oms/pvt/orders/{orderId}/cancel": {
             "post": {
-                "tags": ["Orders"],
+                "tags": [
+                    "Orders"
+                ],
                 "summary": "Cancel order",
                 "description": "You should use this endpoint to cancel an order by its order identification number (the `orderId`).\n\nA common scenario is one where the seller has a problem with the order fulfillment and needs to request the order cancellation to the marketplace. To do this, the seller would need to make this request, passing the `orderId` in the URL.\n\nYou should expect a response with the date when the notification was received, the orderId, and a receipt protocol code.\n\nBe aware that if the order status is already `Invoiced`, the order can only be canceled if—before using this request—you send a return invoice through the [Order Invoice Notification](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice) endpoint.\n\r\n\r> The `Cancel order` resource is needed to use this API request. This is included in `OMS - Full access` and `IntegrationProfile - Fulfillment Oms`, among other default roles available in the Admin. Learn more about [License manager roles and resources](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#).",
                 "operationId": "CancelOrder",
@@ -2885,7 +3442,9 @@
         },
         "/api/oms/pvt/orders/{orderId}/changes": {
             "post": {
-                "tags": ["Orders"],
+                "tags": [
+                    "Orders"
+                ],
                 "summary": "Register change on order",
                 "description": "\r\n> Timeout settings\r\n>\r\n> This is a synchronous API, which means the application requests data and waits until a value is returned. This behavior can cause timeout errors; to avoid them, we recommend setting the timeout in 20 seconds.\r\n\r\n This request allows [changing an order](https://help.vtex.com/en/tutorial/changing-items-from-a-completed-order--tutorials_190) by:\n\r- Adding items to an order\n\r- Removing items from an order\n\r- Applying discounts to the total value of the order\n\r- Incrementing the total value of the order. \n\nIn those scenarios of order changes, it is possible to insert a [Partial invoice](https://help.vtex.com/en/tracks/orders--2xkTisx4SXOWXQel8Jg8sa/q9GPspTb9cHlMeAZfdEUe). The total value of the order will be updated after the insertion of the invoice, even when there is a partial invoice scenario. The updated value is settled by VTEX's Payment Gateway. The reimbursement for the shopper is automatic. \n\r\n\rThis action can only be done for orders in these status:\n\r- `handling`\n\r- `waiting-for-fulfillment` \n\r\n\r> The `Change order` resource is needed to use this API request. This is included in `OMS - Full access` and `IntegrationProfile - Fulfillment Oms`, among other default roles available in the Admin. Learn more about the [License manager roles and resources](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#).",
                 "operationId": "RegisterChange",
@@ -2978,7 +3537,9 @@
         },
         "/api/oms/pvt/orders/{orderId}/interactions": {
             "post": {
-                "tags": ["Orders"],
+                "tags": [
+                    "Orders"
+                ],
                 "summary": "Add log in orders",
                 "description": "Add a Log in Interactions Order Array.",
                 "operationId": "AddLog",
@@ -3043,7 +3604,9 @@
         },
         "/api/oms/pvt/orders/{orderId}/invoice": {
             "post": {
-                "tags": ["Invoice"],
+                "tags": [
+                    "Invoice"
+                ],
                 "summary": "Order invoice notification",
                 "description": "This request is used for [invoicing an order](https://help.vtex.com/en/tracks/orders--2xkTisx4SXOWXQel8Jg8sa/2WgQrlHTyVo4hLjhUs1LMT). Entering the order's invoice means it was successfully completed, and the order status can be changed to the `invoiced` in the [order flow](https://help.vtex.com/en/tutorial/order-flow-and-status--tutorials_196). Once an order is `invoiced`, its status cannot be changed.\r\n\r\nAfter the insertion of the invoice, the order's total amount will be updated, even in [partial invoice](https://help.vtex.com/en/tracks/orders--2xkTisx4SXOWXQel8Jg8sa/q9GPspTb9cHlMeAZfdEUe) scenarios.\r\n\r\n>❗ To avoid rounding errors, we recommend always sending the object of the items being invoiced.\r\n\r\n## Partial invoices\r\n\r\nAfter adding a partial invoice, the order's amount will be updated, corresponding to the settled amount in the VTEX payment gateway. Partial invoices added to orders result in partial settlements in the transaction.\r\n\r\nPartially invoicing the order keeps the transaction open until the rest of the amount is settled or canceled. For more information, see [Partial Invoices](https://help.vtex.com/en/tracks/orders--2xkTisx4SXOWXQel8Jg8sa/q9GPspTb9cHlMeAZfdEUe).\r\n\r\n> The partial invoices feature is available for all VTEX stores. The partial settlement in the gateway is in Beta, and requires a connector with the Payment Provider Protocol.\r\n\r\n## Returning items\r\n\r\nBesides using this endpoint for generating invoices for sold items, you can use it for generating invoices for returned items. You determine this in the request body `type` field by choosing one of the following values:\r\n\r\n- `output`: selling order invoice.\r\n\r\n- `input`: returning items invoice.\r\n\r\nBe aware of generating return invoices only after the full order amount was invoiced, otherwise, no refund will occur.\r\n\r\n## Changing the receipt code\r\n\r\nEvery time this endpoint is called using the same `invoiceNumber`, a new `receipt` code is generated, and it overrides the previous one. By doing this, you cannot change other information, only the `receipt` code.\r\n\r\n## Integration with marketplaces\r\n\r\nThe invoice should be pushed to the fulfillment account, not to the marketplace account. Once the order is invoiced, the seller should use this request to send the invoice information to the marketplace.\r\n\r\nThis endpoint is also used by the seller to send the order tracking information. However, this only should be done after the seller has the tracking information.\r\n\r\n> The `Notify invoice` resource is needed to use this API request. This is included in `OMS - Full access` and `IntegrationProfile - Fulfillment Oms`, among other default roles available in the Admin. Learn more about the [License manager roles and resources](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#).\r\n\r\n> Check the new [Orders onboarding guide](https://developers.vtex.com/vtex-rest-api/docs/orders-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about Orders and is organized by focusing on the developer's journey.\r\n\r\n",
                 "operationId": "InvoiceNotification",
@@ -3150,7 +3713,9 @@
         },
         "/api/oms/pvt/orders/{orderId}/invoice/{invoiceNumber}": {
             "patch": {
-                "tags": ["Invoice"],
+                "tags": [
+                    "Invoice"
+                ],
                 "summary": "Update order's partial invoice (send tracking number)",
                 "description": "Update a given order, adding its tracking number to its [Partial invoice](https://help.vtex.com/en/tracks/pedidos--2xkTisx4SXOWXQel8Jg8sa/q9GPspTb9cHlMeAZfdEUe).\n\r\n\rAfter using this call to add a tracking number to an order, you can use the [Update order tracking status](https://developers.vtex.com/vtex-rest-api/reference/tracking#updatetrackingstatus) API request to add tracking events.\n\r\n\r> The `Notify invoice` resource is needed to use this API request. This is included in `OMS - Full access` and `IntegrationProfile - Fulfillment Oms`, among other default roles available in the Admin. Learn more about the [License manager roles and resources](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc).",
                 "operationId": "Updatepartialinvoice.SendTrackingNumber",
@@ -3241,7 +3806,9 @@
         },
         "/api/oms/pvt/orders/{orderId}/invoice/{invoiceNumber}/tracking": {
             "put": {
-                "tags": ["Tracking"],
+                "tags": [
+                    "Tracking"
+                ],
                 "summary": "Update order tracking status",
                 "description": "This endpoint sends a tracking event to an order that already has a tracking number registered to its invoice.\r\n\r\nThis request is not meant to send a tracking number and URL to the invoice. If you wish to send a tracking number and URL to an order, use the [Update order's partial invoice](https://developers.vtex.com/docs/api-reference/orders-api#patch-/api/oms/pvt/orders/-orderId-/invoice/-invoiceNumber-) endpoint. For more information, see [Partial invoice](https://help.vtex.com/en/tracks/partial-invoices--2xkTisx4SXOWXQel8Jg8sa/q9GPspTb9cHlMeAZfdEUe) scenarios.\r\n\r\nThis endpoint applies to orders with any shipping type, whether delivery or [pickup](https://help.vtex.com/en/tutorial/pickup-points--2fljn6wLjn8M4lJHA6HP3R).\r\n\r\n> The `Notify invoice` License Manager resource is needed to use this API request. This is included in `OMS - Full access` and `IntegrationProfile - Fulfillment Oms`, among other default roles available in the Admin. Learn more about [License Manager Roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc).",
                 "operationId": "UpdateTrackingStatus",
@@ -3456,7 +4023,9 @@
         },
         "/api/oms/pvt/orders/{orderId}/conversation-message": {
             "get": {
-                "tags": ["Conversation"],
+                "tags": [
+                    "Conversation"
+                ],
                 "summary": "Retrieve order conversation",
                 "description": "List all order conversations of an order by its order ID.",
                 "operationId": "GetConversation",
@@ -3671,7 +4240,9 @@
         },
         "/api/oms/pvt/orders/{orderId}/payment-transaction": {
             "get": {
-                "tags": ["Payment"],
+                "tags": [
+                    "Payment"
+                ],
                 "summary": "Retrieve payment transaction",
                 "description": "Retrieves transaction details by order ID. All events in the transaction will be registered in this call's response body. \n\nIn scenarios of [order changes](https://developers.vtex.com/vtex-rest-api/reference/registerchange), it is possible to insert a [Partial invoice](https://help.vtex.com/en/tracks/pedidos--2xkTisx4SXOWXQel8Jg8sa/q9GPspTb9cHlMeAZfdEUe). The total value of the order will be updated after the insertion of the invoice, even when there is a [Partial invoice](https://help.vtex.com/en/tracks/pedidos--2xkTisx4SXOWXQel8Jg8sa/q9GPspTb9cHlMeAZfdEUe) scenario. The updated value is settled by VTEX's Payment Gateway. The reimbursement for the shopper is automatic.",
                 "operationId": "GetPaymenttransaction",
@@ -3765,7 +4336,9 @@
         },
         "/api/oms/pvt/orders/{orderId}/payments/{paymentId}/payment-notification": {
             "post": {
-                "tags": ["Payment"],
+                "tags": [
+                    "Payment"
+                ],
                 "summary": "Send payment notification",
                 "description": "Send a payment notification of a given order, by order ID.\n\r\n\r> The `Notify payment` resource is needed to use this API request. This is included in `OMS - Full access` and `IntegrationProfile - Fulfillment Oms`, among other default roles available in the Admin. Learn more about the [License manager roles and resources](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#).",
                 "operationId": "SendPaymentNotification",
@@ -3839,7 +4412,9 @@
         },
         "/api/oms/pvt/feed/orders/status": {
             "get": {
-                "tags": ["Feed v2 (deprecated)"],
+                "tags": [
+                    "Feed v2 (deprecated)"
+                ],
                 "summary": "Get feed order status",
                 "description": "Get feed order status (deprecated)",
                 "operationId": "Getfeedorderstatus",
@@ -3890,7 +4465,9 @@
         },
         "/api/orders/feed/config": {
             "get": {
-                "tags": ["Feed v3"],
+                "tags": [
+                    "Feed v3"
+                ],
                 "summary": "Get feed configuration",
                 "description": "The Orders Feed v3 is the best way to create order integrations. Below you can find details on the configuration API specification, and to know more see our [Feed v3 guide](https://developers.vtex.com/vtex-rest-api/docs/orders-feed) and our [order integration guide](https://developers.vtex.com/vtex-rest-api/docs/erp-integration-set-up-order-integration).\n\r\n> 📘 Onboarding guide \r\n>\r\n> Check the new [Orders onboarding guide](https://developers.vtex.com/vtex-rest-api/docs/orders-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about Orders and is organized by focusing on the developer's journey.\r\n\r\n",
                 "operationId": "GetFeedConfiguration",
@@ -3994,7 +4571,9 @@
                 "deprecated": false
             },
             "post": {
-                "tags": ["Feed v3"],
+                "tags": [
+                    "Feed v3"
+                ],
                 "summary": "Create or update feed configuration",
                 "description": "The Orders Feed v3 is the best way to create order integrations. Below you can find details on the configuration API specification, and to know more see our [Feed v3 guide](https://developers.vtex.com/vtex-rest-api/docs/orders-feed) and our [order integration guide](https://developers.vtex.com/vtex-rest-api/docs/erp-integration-set-up-order-integration)\n\r\n\rThere are two types of filtering that can be used. The `FromWorkflow` type filters orders by status, whereas the `FromOrders` type uses JSONata expressions to filter orders according to any property in the orders JSON document. This enables stores to filter delivered orders and orders in which products have been added or removed, for example. To learn more, access the [JSONata documentation](https://docs.jsonata.org/overview.html) and test filtering JSONata expressions with our [Test JSONata expression](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/expressions/jsonata) endpoint.",
                 "operationId": "FeedConfiguration",
@@ -4061,7 +4640,9 @@
                 "deprecated": false
             },
             "delete": {
-                "tags": ["Feed v3"],
+                "tags": [
+                    "Feed v3"
+                ],
                 "summary": "Delete feed configuration",
                 "description": "Deletes the configuration set up in [Feed v3](https://developers.vtex.com/docs/guides/orders-feed).",
                 "operationId": "FeedConfigurationDelete",
@@ -4111,7 +4692,9 @@
         },
         "/api/orders/feed": {
             "get": {
-                "tags": ["Feed v3"],
+                "tags": [
+                    "Feed v3"
+                ],
                 "summary": "Retrieve feed items",
                 "description": "Retrieve items from [feed](https://developers.vtex.com/docs/guides/orders-feed) queue. \n\r\nThe event will be removed if the message `send retry` is equal to, or greater than the maximum retention period.\r\n\r\n> This API will return `404 Not Found` if there is no [Feed Configuration](https://developers.vtex.com/docs/guides/orders-feed) available for the given X-VTEX-API-AppKey.",
                 "operationId": "Getfeedorderstatus1",
@@ -4181,7 +4764,9 @@
                 "deprecated": false
             },
             "post": {
-                "tags": ["Feed v3"],
+                "tags": [
+                    "Feed v3"
+                ],
                 "summary": "Commit feed items",
                 "description": "Commit items in the [feed](https://developers.vtex.com/docs/guides/orders-feed) queue.",
                 "operationId": "Commititemfeedorderstatus",
@@ -4242,7 +4827,9 @@
         },
         "/api/orders/hook/config": {
             "get": {
-                "tags": ["Order hook"],
+                "tags": [
+                    "Order hook"
+                ],
                 "summary": "Get hook configuration",
                 "description": "Retrieves a given hook's configuration details. Learn more with the [orders hook guide](https://developers.vtex.com/vtex-rest-api/docs/orders-feed#hook). \r\n\r\n> 📘 Onboarding guide \r\n>\r\n> Check the new [Orders onboarding guide](https://developers.vtex.com/vtex-rest-api/docs/orders-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about Orders and is organized by focusing on the developer's journey.\r\n\r\n",
                 "operationId": "GetHookConfiguration",
@@ -4315,7 +4902,9 @@
                 "deprecated": false
             },
             "post": {
-                "tags": ["Order hook"],
+                "tags": [
+                    "Order hook"
+                ],
                 "summary": "Create or update hook configuration",
                 "description": "Configures filtering rules applied to orders hook. Learn more with the [orders hook guide](https://developers.vtex.com/vtex-rest-api/docs/orders-feed#hook).\n\r\n\rThere are two types of filtering that can be used: \n\r\n\r - `FromWorkflow`: filters orders by status.\n\r\n\r - `FromOrders`: uses JSONata expressions to filter orders according to any property in the orders JSON document.\n\r\n\r This enables stores to filter delivered orders and orders in which products have been added or removed, for example.\n\r\n\rTo learn more, access the [JSONata documentation](https://docs.jsonata.org/overview.html) and test filtering JSONata expressions with our [expressions API](https://developers.vtex.com/docs/api-reference/orders-api#post-/api/orders/expressions/jsonata).",
                 "operationId": "HookConfiguration",
@@ -4394,7 +4983,9 @@
                 "deprecated": false
             },
             "delete": {
-                "tags": ["Order hook"],
+                "tags": [
+                    "Order hook"
+                ],
                 "summary": "Delete hook configuration",
                 "description": "Deletes a given hook configuration.\n\r\n\rLearn more with the [orders hook guide](https://developers.vtex.com/vtex-rest-api/docs/orders-feed#hook).",
                 "operationId": "DeleteHookConfiguration",
@@ -4441,7 +5032,9 @@
         },
         "/api/oms/user/orders": {
             "get": {
-                "tags": ["User orders"],
+                "tags": [
+                    "User orders"
+                ],
                 "summary": "Retrieve user's orders",
                 "description": "Lists all orders from a given customer, filtering by their email. \r\n\r\n> You can only access information from orders created in the last two years, and that same period is valid for customers through [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3GiqhqGJTXsWVuio3Xh). To access order data from previous years, please contact [our Support](https://support.vtex.com/hc/en-us/requests). Your access to orders placed before the last two years is temporary and will be available for 15 days. \r\n\r\n> Note that this request should be made by an [user](https://developers.vtex.com/docs/guides/user-authentication-and-login) or [an appKey / appToken pair](https://developers.vtex.com/docs/guides/api-authentication-using-application-keys) that is associated with the [Call center operator](https://help.vtex.com/en/tutorial/predefined-roles--jGDurZKJHvHJS13LnO7Dy#call-center-operator) role. Otherwise, it will return only orders from the same email informed in the `clientEmail` query parameter.",
                 "operationId": "Userorderslist",
@@ -4957,7 +5550,9 @@
         },
         "/api/oms/user/orders/{orderId}": {
             "get": {
-                "tags": ["User orders"],
+                "tags": [
+                    "User orders"
+                ],
                 "summary": "Retrieve user order details",
                 "description": "Lists all details from an order, through the perspective of the customer who placed the order. \r\n\r\n> You can only access information from orders created in the last two years, and that same period is valid for customers through [My Account](https://help.vtex.com/en/tutorial/how-my-account-works--2BQ3GiqhqGJTXsWVuio3Xh). To access order data from previous years, please contact [our Support](https://support.vtex.com/hc/en-us/requests). Your access to orders placed before the last two years is temporary and will be available for 15 days. \r\n\r\n> Note that this request should be made by an [user](https://developers.vtex.com/docs/guides/user-authentication-and-login) or [an appKey / appToken pair](https://developers.vtex.com/docs/guides/api-authentication-using-application-keys) that is associated with the [Call center operator](https://help.vtex.com/en/tutorial/predefined-roles--jGDurZKJHvHJS13LnO7Dy#call-center-operator) role. Otherwise, it will return only orders from the same email informed in the `clientEmail` query parameter.",
                 "operationId": "Userorderdetails",
@@ -5179,7 +5774,9 @@
                                         "utmiCampaign": " ",
                                         "utmipage": " ",
                                         "utmiPart": " ",
-                                        "marketingTags": ["vtex-subscription"]
+                                        "marketingTags": [
+                                            "vtex-subscription"
+                                        ]
                                     },
                                     "ratesAndBenefitsData": {
                                         "id": "ratesAndBenefitsData",
@@ -5298,7 +5895,9 @@
                                                         "pickupDistance": 0.0
                                                     }
                                                 ],
-                                                "shipsTo": ["BRA"],
+                                                "shipsTo": [
+                                                    "BRA"
+                                                ],
                                                 "deliveryIds": [
                                                     {
                                                         "courierId": "197a56f",
@@ -5568,7 +6167,9 @@
         },
         "/api/orders/expressions/jsonata": {
             "post": {
-                "tags": ["Feed v3"],
+                "tags": [
+                    "Feed v3"
+                ],
                 "summary": "Test JSONata expression",
                 "description": "This endpoint allows you to test a JSON document with a JSONata expression, returning `true` if the document meets the criteria posed in the expression, or `false` if it does not.\n\r\n\rSince JSONata expressions can be used to filter order updates in the [Orders API feed and hook](https://developers.vtex.com/docs/guides/orders-feed), this endpoint can be used to test an expression's results before configuring the [feed or hook](https://developers.vtex.com/docs/guides/orders-feed).\n\r\n\rLearn more about how to use JSONata expressions, in the [JSONata documentation](https://docs.jsonata.org/overview.html).",
                 "operationId": "TestJSONataExpression",
@@ -5628,7 +6229,9 @@
         },
         "/api/checkout/pvt/configuration/window-to-change-seller": {
             "get": {
-                "tags": ["Change seller"],
+                "tags": [
+                    "Change seller"
+                ],
                 "summary": "Get window to change seller",
                 "description": "Retrieves a marketplace’s window to change seller, that is, the period when it is possible to choose another seller to fulfill a given order after the original seller has canceled it.\n\r\n\rThe default period for this window is of 2 days, but it can be configured by the request Update window to change seller.",
                 "operationId": "GetWindowToChangeSeller",
@@ -5677,7 +6280,9 @@
                 "deprecated": false
             },
             "post": {
-                "tags": ["Change seller"],
+                "tags": [
+                    "Change seller"
+                ],
                 "summary": "Update window to change seller",
                 "description": "Updates a marketplace’s window to change seller, that is, the period when it is possible to choose another seller to fulfill a given order after the original seller has canceled it.\n\r\n\rIt is possible to check the current window using the request Get window to change seller.",
                 "operationId": "UpdateWindowToChangeSeller",
@@ -5711,7 +6316,9 @@
                         "application/json": {
                             "schema": {
                                 "type": "object",
-                                "required": ["waitingTime"],
+                                "required": [
+                                    "waitingTime"
+                                ],
                                 "properties": {
                                     "waitingTime": {
                                         "type": "integer",
@@ -5738,8 +6345,12 @@
     },
     "security": [
         {
-            "appKey": ["{{appKey}}"],
-            "appToken": ["{{appToken}}"]
+            "appKey": [
+                "{{appKey}}"
+            ],
+            "appToken": [
+                "{{appToken}}"
+            ]
         }
     ],
     "components": {
@@ -6272,7 +6883,9 @@
                                         "pickupDistance": 0.0
                                     }
                                 ],
-                                "shipsTo": ["BRA"],
+                                "shipsTo": [
+                                    "BRA"
+                                ],
                                 "deliveryIds": [
                                     {
                                         "courierId": "197a56f",
@@ -6456,7 +7069,11 @@
             },
             "Total": {
                 "title": "Total",
-                "required": ["id", "name", "value"],
+                "required": [
+                    "id",
+                    "name",
+                    "value"
+                ],
                 "type": "object",
                 "properties": {
                     "id": {
@@ -6641,7 +7258,11 @@
                         "nullable": true,
                         "items": {
                             "type": "object",
-                            "required": ["name", "required", "schema"],
+                            "required": [
+                                "name",
+                                "required",
+                                "schema"
+                            ],
                             "properties": {
                                 "name": {
                                     "type": "string",
@@ -6733,7 +7354,10 @@
                             "sellingPrices": {
                                 "type": "array",
                                 "items": {
-                                    "required": ["value", "quantity"],
+                                    "required": [
+                                        "value",
+                                        "quantity"
+                                    ],
                                     "properties": {
                                         "value": {
                                             "type": "integer",
@@ -6841,7 +7465,9 @@
                             "schema": {
                                 "vtex.subscription.key.frequency": {
                                     "MaximumNumberOfCharacters": 5,
-                                    "Domain": ["1 day"]
+                                    "Domain": [
+                                        "1 day"
+                                    ]
                                 }
                             }
                         }
@@ -6897,7 +7523,10 @@
             "ItemAttachment": {
                 "title": "ItemAttachment",
                 "description": "Information about attachments, if it applies.",
-                "required": ["content", "name"],
+                "required": [
+                    "content",
+                    "name"
+                ],
                 "type": "object",
                 "properties": {
                     "content": {
@@ -7139,27 +7768,54 @@
                     "customerClass": null
                 }
             },
-            "RatesAndBenefitsData": {
-                "title": "RatesAndBenefitsData",
-                "description": "Information on promotions and taxes that apply to the order.",
-                "required": ["id", "rateAndBenefitsIdentifiers"],
+            "ratesAndBenefitsData": {
                 "type": "object",
                 "properties": {
                     "id": {
-                        "type": "string",
-                        "description": "ID of the rate or benefit."
+                        "type": "string"
                     },
                     "rateAndBenefitsIdentifiers": {
                         "type": "array",
                         "items": {
-                            "type": "string"
-                        },
-                        "description": "Information about order's promotions and taxes identifiers."
+                            "type": "object",
+                            "properties": {
+                                "description": {
+                                    "type": "string",
+                                    "format": "nullable"
+                                },
+                                "featured": {
+                                    "type": "boolean"
+                                },
+                                "id": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "matchedParameters": {
+                                    "type": "string",
+                                    "format": "nullable"
+                                },
+                                "additionalInfo": {
+                                    "type": "object",
+                                    "properties": {
+                                        "program": {
+                                            "type": "string"
+                                        },
+                                        "hostRewards": {
+                                            "type": "string"
+                                        },
+                                        "CreditLedger": {
+                                            "type": "string"
+                                        },
+                                        "consultantPriceModifier": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
-                },
-                "example": {
-                    "id": "ratesAndBenefitsData",
-                    "rateAndBenefitsIdentifiers": []
                 }
             },
             "ShippingData": {
@@ -7313,7 +7969,9 @@
                                     "pickupDistance": 0.0
                                 }
                             ],
-                            "shipsTo": ["BRA"],
+                            "shipsTo": [
+                                "BRA"
+                            ],
                             "deliveryIds": [
                                 {
                                     "courierId": "197a56f",
@@ -7575,7 +8233,10 @@
                         "description": "List of delivery channels associated with the trade policy.",
                         "items": {
                             "type": "object",
-                            "required": ["id", "stockBalance"],
+                            "required": [
+                                "id",
+                                "stockBalance"
+                            ],
                             "properties": {
                                 "id": {
                                     "type": "string",
@@ -7715,7 +8376,9 @@
                             "pickupDistance": 0.0
                         }
                     ],
-                    "shipsTo": ["BRA"],
+                    "shipsTo": [
+                        "BRA"
+                    ],
                     "deliveryIds": [
                         {
                             "courierId": "197a56f",
@@ -8049,7 +8712,9 @@
             "PaymentData": {
                 "title": "PaymentData",
                 "description": "Object with information about the payment.",
-                "required": ["transactions"],
+                "required": [
+                    "transactions"
+                ],
                 "type": "object",
                 "properties": {
                     "giftCards": {
@@ -8336,7 +9001,12 @@
                     "connectorResponses": {
                         "type": "object",
                         "description": "Information about the connector responses.",
-                        "required": ["Tid", "ReturnCode", "Message", "authId"],
+                        "required": [
+                            "Tid",
+                            "ReturnCode",
+                            "Message",
+                            "authId"
+                        ],
                         "properties": {
                             "Tid": {
                                 "type": "string",
@@ -8393,8 +9063,7 @@
                         "description": "Type of the bank issued invoice bar code."
                     },
                     "billingAddress": {
-                        "type": "object",
-                        "description": "Billing address information."
+                        "$ref": "#/components/schemas/BillingAddress"
                     }
                 },
                 "example": {
@@ -8437,10 +9106,80 @@
                     "billingAddress": {}
                 }
             },
+            "BillingAddress": {
+                "title": "BillingAddress",
+                "required": [
+                    "postalCode",
+                    "city",
+                    "state",
+                    "country",
+                    "street",
+                    "number",
+                    "neighborhood",
+                    "complement",
+                    "reference",
+                    "geoCoordinates"
+                ],
+                "type": "object",
+                "properties": {
+                    "postalCode": {
+                        "type": "string"
+                    },
+                    "city": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "type": "string"
+                    },
+                    "country": {
+                        "type": "string"
+                    },
+                    "street": {
+                        "type": "string"
+                    },
+                    "number": {
+                        "type": "string"
+                    },
+                    "neighborhood": {
+                        "type": "string",
+                        "format": "nullable"
+                    },
+                    "complement": {
+                        "type": "string"
+                    },
+                    "reference": {
+                        "type": "string",
+                        "format": "nullable"
+                    },
+                    "geoCoordinates": {
+                        "type": "array",
+                        "items": {
+                            "type": "number"
+                        }
+                    }
+                },
+                "example": {
+                    "postalCode": "90401",
+                    "city": "Santa Monica",
+                    "state": "CA",
+                    "country": "USA",
+                    "street": "1733 Ocean Ave",
+                    "number": "",
+                    "neighborhood": null,
+                    "complement": "",
+                    "reference": null,
+                    "geoCoordinates": [
+                        -118.49,
+                        34.01
+                    ]
+                }
+            },
             "PackageAttachment": {
                 "title": "PackageAttachment",
                 "description": "Package object populated after order invoiced.",
-                "required": ["packages"],
+                "required": [
+                    "packages"
+                ],
                 "type": "object",
                 "properties": {
                     "packages": {
@@ -8458,7 +9197,12 @@
             "Seller": {
                 "title": "Seller",
                 "description": "Information about the seller associated with the order.",
-                "required": ["id", "name", "logo", "fulfillmentEndpoint"],
+                "required": [
+                    "id",
+                    "name",
+                    "logo",
+                    "fulfillmentEndpoint"
+                ],
                 "type": "object",
                 "properties": {
                     "id": {
@@ -8488,7 +9232,10 @@
             "ChangesAttachment": {
                 "title": "ChangesAttachment",
                 "description": "Information about changes in the order.",
-                "required": ["id", "changesData"],
+                "required": [
+                    "id",
+                    "changesData"
+                ],
                 "type": "object",
                 "properties": {
                     "id": {
@@ -8640,7 +9387,11 @@
             "Receipt": {
                 "title": "Receipt",
                 "description": "Information about the receipt for changed orders.",
-                "required": ["date", "orderId", "receipt"],
+                "required": [
+                    "date",
+                    "orderId",
+                    "receipt"
+                ],
                 "type": "object",
                 "properties": {
                     "date": {
@@ -8761,7 +9512,11 @@
             "Marketplace": {
                 "title": "Marketplace",
                 "description": "Details about the marketplace related to the order.",
-                "required": ["baseURL", "isCertified", "name"],
+                "required": [
+                    "baseURL",
+                    "isCertified",
+                    "name"
+                ],
                 "type": "object",
                 "properties": {
                     "baseURL": {
@@ -8786,7 +9541,12 @@
             },
             "ListOrders": {
                 "title": "ListOrders",
-                "required": ["list", "facets", "paging", "stats"],
+                "required": [
+                    "list",
+                    "facets",
+                    "paging",
+                    "stats"
+                ],
                 "type": "object",
                 "properties": {
                     "list": {
@@ -9499,7 +10259,12 @@
             },
             "Paging": {
                 "title": "Paging",
-                "required": ["total", "pages", "currentPage", "perPage"],
+                "required": [
+                    "total",
+                    "pages",
+                    "currentPage",
+                    "perPage"
+                ],
                 "type": "object",
                 "properties": {
                     "total": {
@@ -9528,7 +10293,9 @@
             },
             "Stats": {
                 "title": "Stats",
-                "required": ["stats"],
+                "required": [
+                    "stats"
+                ],
                 "type": "object",
                 "properties": {
                     "stats": {
@@ -9640,7 +10407,10 @@
             },
             "Stats1": {
                 "title": "Stats1",
-                "required": ["totalValue", "totalItems"],
+                "required": [
+                    "totalValue",
+                    "totalItems"
+                ],
                 "type": "object",
                 "properties": {
                     "totalValue": {
@@ -9852,7 +10622,10 @@
             },
             "Facets": {
                 "title": "Facets",
-                "required": ["origin", "currencyCode"],
+                "required": [
+                    "origin",
+                    "currencyCode"
+                ],
                 "type": "object",
                 "properties": {
                     "origin": {
@@ -9904,7 +10677,10 @@
             },
             "Origin": {
                 "title": "Origin",
-                "required": ["Fulfillment", "Marketplace"],
+                "required": [
+                    "Fulfillment",
+                    "Marketplace"
+                ],
                 "type": "object",
                 "properties": {
                     "Fulfillment": {
@@ -10065,7 +10841,9 @@
             },
             "CurrencyCode": {
                 "title": "CurrencyCode",
-                "required": ["BRL"],
+                "required": [
+                    "BRL"
+                ],
                 "type": "object",
                 "properties": {
                     "BRL": {
@@ -10249,7 +11027,10 @@
             },
             "Facets1": {
                 "title": "Facets1",
-                "required": ["origin", "currencyCode"],
+                "required": [
+                    "origin",
+                    "currencyCode"
+                ],
                 "type": "object",
                 "properties": {
                     "origin": {
@@ -10301,7 +11082,10 @@
             },
             "Origin1": {
                 "title": "Origin1",
-                "required": ["Fulfillment", "Marketplace"],
+                "required": [
+                    "Fulfillment",
+                    "Marketplace"
+                ],
                 "type": "object",
                 "properties": {
                     "Fulfillment": {
@@ -10464,7 +11248,9 @@
             },
             "CurrencyCode1": {
                 "title": "CurrencyCode1",
-                "required": ["BRL"],
+                "required": [
+                    "BRL"
+                ],
                 "type": "object",
                 "properties": {
                     "BRL": {
@@ -10584,7 +11370,11 @@
                         "description": "List of items that should be removed from the order.",
                         "items": {
                             "type": "object",
-                            "required": ["id", "price", "quantity"],
+                            "required": [
+                                "id",
+                                "price",
+                                "quantity"
+                            ],
                             "properties": {
                                 "id": {
                                     "type": "string",
@@ -10611,7 +11401,11 @@
                         "description": "List of items that should be added to the order.",
                         "items": {
                             "type": "object",
-                            "required": ["id", "price", "quantity"],
+                            "required": [
+                                "id",
+                                "price",
+                                "quantity"
+                            ],
                             "properties": {
                                 "id": {
                                     "type": "string",
@@ -10680,7 +11474,10 @@
             },
             "AddLogRequest": {
                 "title": "AddLogRequest",
-                "required": ["source", "message"],
+                "required": [
+                    "source",
+                    "message"
+                ],
                 "type": "object",
                 "properties": {
                     "source": {
@@ -10793,7 +11590,11 @@
             },
             "Item1": {
                 "title": "Item1",
-                "required": ["id", "price", "quantity"],
+                "required": [
+                    "id",
+                    "price",
+                    "quantity"
+                ],
                 "type": "object",
                 "properties": {
                     "id": {
@@ -10864,7 +11665,11 @@
             },
             "Updatepartialinvoice.SendTrackingNumber": {
                 "title": "Updatepartialinvoice.SendTrackingNumber",
-                "required": ["date", "orderId", "receipt"],
+                "required": [
+                    "date",
+                    "orderId",
+                    "receipt"
+                ],
                 "type": "object",
                 "properties": {
                     "date": {
@@ -10885,7 +11690,11 @@
             },
             "UpdateTrackingStatusRequest": {
                 "title": "UpdateTrackingStatusRequest",
-                "required": ["isDelivered", "deliveredDate", "events"],
+                "required": [
+                    "isDelivered",
+                    "deliveredDate",
+                    "events"
+                ],
                 "type": "object",
                 "properties": {
                     "isDelivered": {
@@ -10928,7 +11737,12 @@
             },
             "Event": {
                 "title": "Event",
-                "required": ["city", "state", "description", "date"],
+                "required": [
+                    "city",
+                    "state",
+                    "description",
+                    "date"
+                ],
                 "type": "object",
                 "properties": {
                     "city": {
@@ -10953,7 +11767,11 @@
             },
             "UpdateTrackingStatus": {
                 "title": "UpdateTrackingStatus",
-                "required": ["date", "orderId", "receipt"],
+                "required": [
+                    "date",
+                    "orderId",
+                    "receipt"
+                ],
                 "type": "object",
                 "properties": {
                     "date": {
@@ -11063,7 +11881,9 @@
                     "firstWords": "Your payment has been aproved and we are waiting for...",
                     "body": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional //EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"> <html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" style=\"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; box-sizing: border-box; width: 100%; height: 100%; margin: 0; padding: 0; background: #f1f1f1 !important;\"> <head> <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/> <title>recorrenciaqa</title> <!--[if gte mso 9]> <xml> <o:OfficeDocumentSettings> <o:AllowPNG/> <o:PixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocumentSettings> </xml> <![endif]--> <style> a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important; } </style> <style> @media (max-width: 600px) { img { max-width: 100% !important; height: auto !important; } } </style> <style> @media screen and (min-width: 30em) { .ph4-ns { padding-left: 2rem !important; padding-right: 2rem !important; } .mv4-ns { margin-top: 2rem !important; margin-bottom: 2rem !important; } } </style> </head> <body style=\"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; box-sizing: border-box; width: 100%; height: 100%; margin: 0; padding: 0; background: #f1f1f1 !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;\"> <table width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"box-sizing: border-box; margin: 0; padding: 0; background: #f1f1f1; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; width: 100%; height: 100%; line-height: 100% !important;\"> <tr style=\"box-sizing: border-box !important;\"> <td align=\"left\" valign=\"top\" style=\"font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;\"> <table class=\"mv4-ns\" width=\"100%\" align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"box-sizing: border-box; max-width: 40rem; width: 100%; background-color: #fff; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;\" bgcolor=\"#fff\"> <tr style=\"box-sizing: border-box !important;\"> <td class=\"ph4-ns\" style=\"font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; border-bottom-style: solid; border-bottom-width: 1px; border-color: #eee; width: 100%; padding-bottom: 2rem; text-align: center !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;\" align=\"center\"> <div style=\"box-sizing: border-box; width: 8rem; margin-bottom: 1rem; margin-top: 2rem; margin-right: auto; margin-left: auto !important;\"> <a href=\"http://.com.br\" style=\"box-sizing: border-box !important;\"> <img alt=\"\" border=\"0\" width=\"auto\" src=\"http://licensemanager.vtex.com.br/api/site/pub/accounts/9ddcfba5-3855-49ec-b61e-b2847b9314cc/logos/show\" style=\"vertical-align: top; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; max-width: 100%; border: none; max-height: 80px !important;\"> </img></a> </div> <h1 style=\"margin: 0; font-size: 50px; line-height: 58px; box-sizing: border-box !important;\">Seu pagamento foi aprovado.</h1> <div style=\"box-sizing: border-box; color: #777; margin-top: .5rem !important;\"> Referente ao Pedido <span style=\"font-weight: 700 !important;\">#1305371685465-01</span> </div> </td> </tr> <tr style=\"box-sizing: border-box !important;\"> <td class=\"ph4-ns\" style=\"font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; width: 100% !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;\" align=\"left\"> <div style=\"box-sizing: border-box; margin-top: 2rem !important;\"> <p style=\"box-sizing: border-box !important;\">    Olá, jose.     Estamos providenciando a emissão da Nota Fiscal do seu pedido e o envio do seu produto.  </p> </div> </td> </tr> <tr style=\"box-sizing: border-box !important;\"> <td class=\"ph4-ns\" style=\"font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; width: 100%; padding-bottom: 2rem; padding-top: 1rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;\" align=\"left\"> <h3 style=\"font-size: 20px; line-height: 36px; text-transform: uppercase; letter-spacing: 1.2pt; font-weight: 300; margin-top: 16px; box-sizing: border-box; margin: 0 !important;\">Pagamento</h3>    <div style=\"box-sizing: border-box; line-height: 1.5; font-size: 1.25rem !important;\"> Visa  final 1111  <br/>R$ 3,99  à vista  </div>     </td> </tr> <tr style=\"box-sizing: border-box !important;\"> <td class=\"ph4-ns\" style=\"font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; border-top-style: solid; border-top-width: 1px; border-color: #eee; padding-top: 1rem; padding-bottom: 1rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;\" align=\"left\"> <p style=\"box-sizing: border-box !important;\"> Atenciosamente,<br/>Equipe recorrenciaqa </p> </td> </tr> </table> </td> </tr> </table> </body> </html>",
                     "hasAttachment": false,
-                    "attachmentNames": ["attachments439505"],
+                    "attachmentNames": [
+                        "attachments439505"
+                    ],
                     "date": "2023-01-23T09:23:31.0000000+00:00"
                 }
             },
@@ -11425,7 +12245,12 @@
             },
             "ConnectorResponses": {
                 "title": "ConnectorResponses",
-                "required": ["Tid", "ReturnCode", "Message", "authId"],
+                "required": [
+                    "Tid",
+                    "ReturnCode",
+                    "Message",
+                    "authId"
+                ],
                 "type": "object",
                 "properties": {
                     "Tid": {
@@ -11456,7 +12281,9 @@
             },
             "ConfirmitemfeedorderstatusRequest": {
                 "title": "ConfirmitemfeedorderstatusRequest",
-                "required": ["commitToken"],
+                "required": [
+                    "commitToken"
+                ],
                 "type": "object",
                 "properties": {
                     "commitToken": {
@@ -11519,7 +12346,9 @@
             },
             "CommititemfeedorderstatusRequest": {
                 "title": "CommititemfeedorderstatusRequest",
-                "required": ["handles"],
+                "required": [
+                    "handles"
+                ],
                 "type": "object",
                 "properties": {
                     "handles": {
@@ -11538,7 +12367,10 @@
             },
             "FeedConfigurationRequest": {
                 "title": "FeedConfigurationRequest",
-                "required": ["filter", "queue"],
+                "required": [
+                    "filter",
+                    "queue"
+                ],
                 "type": "object",
                 "properties": {
                     "filter": {
@@ -11552,7 +12384,9 @@
             "FeedFilter": {
                 "title": "Filter",
                 "description": "Object with type and status that will filter feed orders.",
-                "required": ["type"],
+                "required": [
+                    "type"
+                ],
                 "type": "object",
                 "properties": {
                     "type": {
@@ -11580,7 +12414,9 @@
             },
             "HookFilter": {
                 "title": "Filter",
-                "required": ["type"],
+                "required": [
+                    "type"
+                ],
                 "type": "object",
                 "properties": {
                     "type": {
@@ -11631,7 +12467,10 @@
             },
             "HookConfigurationRequest": {
                 "title": "HookConfigurationRequest",
-                "required": ["filter", "hook"],
+                "required": [
+                    "filter",
+                    "hook"
+                ],
                 "type": "object",
                 "properties": {
                     "filter": {
@@ -11662,7 +12501,10 @@
             },
             "Hook": {
                 "title": "Hook",
-                "required": ["url", "headers"],
+                "required": [
+                    "url",
+                    "headers"
+                ],
                 "type": "object",
                 "properties": {
                     "url": {
@@ -11681,7 +12523,9 @@
             },
             "Headers": {
                 "title": "Headers",
-                "required": ["key"],
+                "required": [
+                    "key"
+                ],
                 "type": "object",
                 "properties": {
                     "key": {
@@ -11742,7 +12586,10 @@
             },
             "Origin2": {
                 "title": "Origin2",
-                "required": ["Account", "Key"],
+                "required": [
+                    "Account",
+                    "Key"
+                ],
                 "type": "object",
                 "properties": {
                     "Account": {
@@ -11759,7 +12606,12 @@
             },
             "Userorderslist": {
                 "title": "Userorderslist",
-                "required": ["list", "facets", "paging", "stats"],
+                "required": [
+                    "list",
+                    "facets",
+                    "paging",
+                    "stats"
+                ],
                 "type": "object",
                 "description": "Order list object.",
                 "properties": {
@@ -12499,7 +13351,9 @@
             },
             "Stats2": {
                 "title": "Stats2",
-                "required": ["stats"],
+                "required": [
+                    "stats"
+                ],
                 "type": "object",
                 "properties": {
                     "stats": {
@@ -12535,7 +13389,10 @@
             },
             "Stats3": {
                 "title": "Stats3",
-                "required": ["totalValue", "totalItems"],
+                "required": [
+                    "totalValue",
+                    "totalItems"
+                ],
                 "type": "object",
                 "properties": {
                     "totalValue": {
@@ -13014,7 +13871,9 @@
                     "itemMetadata": {
                         "type": "object",
                         "description": "Metadata information about the order's items.",
-                        "required": ["Items"],
+                        "required": [
+                            "Items"
+                        ],
                         "properties": {
                             "Items": {
                                 "type": "array",
@@ -13117,7 +13976,10 @@
                         "type": "object",
                         "description": "Information about [subscriptions](https://help.vtex.com/tutorial/how-subscriptions-work--frequentlyAskedQuestions_4453).",
                         "nullable": true,
-                        "required": ["SubscriptionGroupId", "Subscriptions"],
+                        "required": [
+                            "SubscriptionGroupId",
+                            "Subscriptions"
+                        ],
                         "properties": {
                             "SubscriptionGroupId": {
                                 "type": "string",
@@ -13312,7 +14174,10 @@
                     "clientPreferencesData": {
                         "type": "object",
                         "description": "Information about customer's preferences.",
-                        "required": ["locale", "optinNewsLetter"],
+                        "required": [
+                            "locale",
+                            "optinNewsLetter"
+                        ],
                         "properties": {
                             "locale": {
                                 "type": "string",
@@ -13488,7 +14353,9 @@
                         "utmiCampaign": " ",
                         "utmipage": " ",
                         "utmiPart": " ",
-                        "marketingTags": ["vtex-subscription"]
+                        "marketingTags": [
+                            "vtex-subscription"
+                        ]
                     },
                     "ratesAndBenefitsData": {
                         "id": "ratesAndBenefitsData",
@@ -13607,7 +14474,9 @@
                                         "pickupDistance": 29.861602783203125
                                     }
                                 ],
-                                "shipsTo": ["BRA"],
+                                "shipsTo": [
+                                    "BRA"
+                                ],
                                 "deliveryIds": [
                                     {
                                         "courierId": "197a56f",
@@ -13804,7 +14673,10 @@
                                         "InputValues": {
                                             "vtex.subscription.key.frequency": {
                                                 "MaximumNumberOfCharacters": 8,
-                                                "Domain": ["4 month", "1 month"]
+                                                "Domain": [
+                                                    "4 month",
+                                                    "1 month"
+                                                ]
                                             }
                                         },
                                         "Composition": {}
@@ -13867,7 +14739,10 @@
             },
             "TestJSONataExpression": {
                 "type": "object",
-                "required": ["Expression", "Document"],
+                "required": [
+                    "Expression",
+                    "Document"
+                ],
                 "properties": {
                     "Expression": {
                         "type": "string",
